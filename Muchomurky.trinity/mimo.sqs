@@ -1,0 +1,11 @@
+#dokola
+~0.1
+?(player in heli1): goto "dokola"
+
+[player,heli1] exec "vysadek.sqs"
+
+#kkk
+trabi setdammage 0
+~0.1
+?(ridic in trabi): goto "kkk"
+exit

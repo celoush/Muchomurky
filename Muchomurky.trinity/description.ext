@@ -1,0 +1,762 @@
+onLoadMission=$STR_OnLoadMission;
+onLoadIntro=$STR_OnLoadIntro;
+onLoadIntroTime = false
+onLoadMissionTime = false
+MinScore = 0
+AvgScore = 1000
+MaxScore = 6000
+showCompass=1
+showGPS=1
+showMap=1
+showNotepad=1
+showWatch=1
+debriefing=1
+
+
+class CfgIdentities
+{
+ 	class William
+	{
+ 		Name = "William S. Cope";
+		face = "Face11";
+		glasses = "none";
+		speaker = "Marc";
+		pitch = 1.05;
+	};
+
+ 	class Richard
+	{
+ 		Name = "Richard S. Ewell";
+		face = "Face14";
+		glasses = "none";
+		speaker = "Adam";
+		pitch = 1.05;
+	};
+
+ 	class Jakob
+	{
+ 		Name = "Jacob F. Kenta";
+		face = "Face25";
+		glasses = "none";
+		speaker = "Rob";
+		pitch = 1.1;
+	};
+
+ 	class Tim
+	{
+ 		Name = "Bill O. Gardner";
+		face = "Face23";
+		glasses = "none";
+		speaker = "Marc";
+		pitch = 0.75;
+	};
+
+ 	class Peter
+	{
+ 		Name = "Petr Urban";
+		face = "Face3";
+		glasses = "none";
+		speaker = "Adam";
+		pitch = 0.80;
+	};
+
+ 	class Steve
+	{
+ 		Name = "Steve Martin";
+		face = "Face16";
+		glasses = "none";
+		speaker = "Adam";
+		pitch = 1.10;
+	};
+
+
+};
+
+
+
+class CfgMusic
+ {
+
+
+tracks[]= 
+ {
+  soumrak, andele, pevnost, muchomurky, kostel, tiger, osude
+ };
+
+	class soumrak
+	 {
+		  name="soumrak";
+		  sound[]={\music\soumrak.ogg, db+40, 1.0};
+	 };
+
+	class osude
+	 {
+		  name="osude";
+		  sound[]={\music\osude.ogg, db+40, 1.0};
+	 };
+
+	class tiger
+	 {
+		  name="tiger";
+		  sound[]={\music\tiger.ogg, db+40, 1.0};
+	 };
+
+
+	class kostel
+	 {
+		  name="kostel";
+		  sound[]={\music\kostel.ogg, db+40, 1.0};
+	 };
+
+	class muchomurky
+	 {
+		  name="muchorky";
+		  sound[]={\music\muchomurky.ogg, db+40, 1.0};
+	 };
+
+	class andele
+	{
+		name = "andele";
+		sound[] = {\music\andele.ogg, db+40, 1.0};
+	};
+
+	class pevnost
+	{
+		name = "pevnost";
+		sound[] = {\music\pevnost.ogg, db+40, 1.0};
+	};
+
+
+};
+
+
+class CfgSounds
+{
+	sounds[] = { rep1, rep2, rep3, rep4, rep5, rep6, rep7, rep8, rep9, wau, nastup, auto, kecy1, kecy2, kecy3, kecy4, kecy5, kecy6, kecy7, kecy8, kecy9, kecy10, kecy11, kecy12, a14, aaa};
+
+	class rep1
+	{
+		name = "";
+		sound[] = {\sounds\rep1.ogg, db+50, 1.0};
+		titles[] =  {0, $STR_rep1};
+		
+	};
+
+	class aaa
+	{
+		name = "";
+		sound[] = {\sounds\aaa.ogg, db+50, 1.0};
+		titles[] =  {};
+		
+	};
+
+	class rep2
+	{
+		name = "";
+		sound[] = {\sounds\rep2.ogg, db+50, 1.0};
+		titles[] =  {0, $STR_rep2};
+		
+	};
+
+	class rep3
+	{
+		name = "";
+		sound[] = {\sounds\rep3.ogg, db+50, 1.0};
+		titles[] =  {0, $STR_rep3};
+		
+	};
+
+	class rep4
+	{
+		name = "";
+		sound[] = {\sounds\rep4.ogg, db+50, 1.0};
+		titles[] =  {0, $STR_rep4};
+		
+	};
+
+	class rep5
+	{
+		name = "";
+		sound[] = {\sounds\rep5.ogg, db+50, 1.0};
+		titles[] =  {0, $STR_rep5};
+		
+	};
+
+	class rep6
+	{
+		name = "";
+		sound[] = {\sounds\rep6.ogg, db+50, 1.0};
+		titles[] =  {0, $STR_rep6};
+		
+	};
+
+	class rep7
+	{
+		name = "";
+		sound[] = {\sounds\rep7.ogg, db+50, 1.0};
+		titles[] =  {0, $STR_rep7};
+		
+	};
+
+	class rep8
+	{
+		name = "";
+		sound[] = {\sounds\rep8.ogg, db+50, 1.0};
+		titles[] =  {0, $STR_rep8};
+		
+	};
+
+	class rep9
+	{
+		name = "";
+		sound[] = {\sounds\rep9.ogg, db+50, 1.0};
+		titles[] =  {0, $STR_rep9};
+		
+	};
+
+
+	class wau
+	{
+		name = "";
+		sound[] = {\sounds\wau.ogg, db+50, 1.0};
+		titles[] =  {};
+		
+	};
+
+	
+	class nastup
+	{
+		name = "";
+		sound[] = {\sounds\nastup.ogg, db+50, 1.0};
+		titles[] = {0, $STR_nastup};
+	};
+
+	class a14
+	{
+		name = "";
+		sound[] = {\sounds\a14.ogg, db+50, 1.0};
+		titles[] = {0, $STR_a14};
+	};
+
+	class auto
+	{
+		name = "";
+		sound[] = {\sounds\auto.ogg, db+50, 1.0};
+		titles[] = {0, $STR_auto};
+	};
+
+	class kecy1
+	{
+		name = "";
+		sound[] = {\sounds\kecy1.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy1};
+	};
+
+	class kecy2
+	{
+		name = "";
+		sound[] = {\sounds\kecy2.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy2};
+	};
+
+	class kecy3
+	{
+		name = "";
+		sound[] = {\sounds\kecy3.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy3};
+	};
+
+	class kecy4
+	{
+		name = "";
+		sound[] = {\sounds\kecy4.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy4};
+	};
+
+	class kecy5
+	{
+		name = "";
+		sound[] = {\sounds\kecy5.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy5};
+	};
+
+	class kecy6
+	{
+		name = "";
+		sound[] = {\sounds\kecy6.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy6};
+	};
+
+	class kecy7
+	{
+		name = "";
+		sound[] = {\sounds\kecy7.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy7};
+	};
+
+	class kecy8
+	{
+		name = "";
+		sound[] = {\sounds\kecy8.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy8};
+	};
+
+	class kecy9
+	{
+		name = "";
+		sound[] = {\sounds\kecy9.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy9};
+	};
+
+	class kecy10
+	{
+		name = "";
+		sound[] = {\sounds\kecy10.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy10};
+	};
+
+	class kecy11
+	{
+		name = "";
+		sound[] = {\sounds\kecy11.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy11};
+	};
+
+	class kecy12
+	{
+		name = "";
+		sound[] = {\sounds\kecy12.ogg, db+50, 1.0};
+		titles[] = {0, $STR_kecy12};
+	};
+
+
+};
+
+
+// ---------------- Definice písma -----------------
+// --- Není nutné - Lze použít pøímo názvù písem ---
+#define FontS "tahomaB24"
+#define FontM "tahomaB36"
+#define FontHTML "courierNewB64"
+#define FontHTMLBold "courierNewB64"
+#define FontMAP "courierNewB64"
+#define FontMAIN "SteelfishB64"
+#define FontMAINCZ "SteelfishB64CE"
+#define FontTITLE "SteelfishB128"
+#define FontTITLEHalf "SteelfishB64"
+#define FontBOOK "garamond64"
+#define FontNOTES "AudreysHandI48"
+
+// ---------------- Definice typù objektù ----------
+// --- Není nutné - Lze použít pøímo èísla typu  ---
+#define CT_STATIC		0
+
+#define ST_CENTER		2
+#define ST_MULTI		16
+#define ST_SHADOW		256
+#define ST_NO_RECT		512
+
+// ------------ Základní tøídy ----------------
+class RscPicture 
+{ 
+	type=0; 
+	idc=-1; 
+	style=48; 
+	colorBackground[]={0,0,0,1}; 
+	colorText[]={1,1,1,1}; 
+	font="tahomaB24"; 
+	size=0; 
+}; 
+
+class RscText
+{
+	type=0
+	idc=4294967295
+	style=0
+	h=0.040000;
+	colorBackground[]={0,0,0,0};
+	colorText[]={0.780000,0.080000,0.520000,0.750000};
+	font="tahomaB24";
+	sizeEx=0.020000;
+};
+
+class RscBackground
+{
+	type=CT_STATIC
+	idc=-1
+	style=ST_3D_BORDER
+	x=0.150000;
+	y=0.150000;
+	w=0.700000;
+	h=0.700000;
+	text="";
+	colorBackground[]={1,1,1,1};
+	colorText[]={1,0,1,0};
+	font="tahomaB24";
+	sizeEx=0
+};
+
+// ----------------- Tøídy titulkù -------------------
+class RscTitles 
+{ 
+	titles[] = 
+	{
+
+		titlesorb,
+		titlesceloush,
+		titlesuvadi,
+		titleskonec,
+		obrazok,
+	};
+
+	class titlesorb
+	{
+		name = "";
+		duration = 6;
+		idd = -1;
+		movingEnable = false;
+		
+		controls[]= {text};
+
+		class text: RscText
+		{
+			style = ST_MULTI + ST_CENTER + ST_NO_RECT;
+			lineSpacing = 1.0;
+			text = $STR_title3;
+			x = 0.17; y = 0.4; w = 0.66; h = 0.1;
+			colorText[] = {0, 0.5, 0, 1};
+			font = SteelfishB128;
+			sizeEx = 0.25;
+			size = 1.1;
+		};
+
+	};
+
+	class titleskonec
+	{
+		name = "";
+		duration = 6;
+		idd = -1;
+		movingEnable = false;
+		
+		controls[]= {text};
+
+		class text: RscText
+		{
+			style = ST_MULTI + ST_CENTER + ST_NO_RECT;
+			lineSpacing = 1.0;
+			text = $STR_title4;
+			x = 0.17; y = 0.4; w = 0.66; h = 0.1;
+			colorText[] = {0, 0.5, 0, 1};
+			font = SteelfishB128;
+			sizeEx = 0.25;
+			size = 1.1;
+		};
+
+	};
+
+	class titlesceloush
+	{
+		name = "";
+		duration = 6;
+		idd = -1;
+		movingEnable = false;
+		
+		controls[]= {text};
+
+		class text: RscText
+		{
+			style = ST_MULTI + ST_CENTER + ST_NO_RECT;
+			lineSpacing = 1.0;
+			text = $STR_title1;
+			x = 0.17; y = 0.4; w = 0.66; h = 0.1;
+			colorText[] = {0, 0.5, 0, 1};
+			font = SteelfishB128;
+			sizeEx = 0.25;
+			size = 0.7;
+		};
+
+	};
+
+	class titlesuvadi
+	{
+		name = "";
+		duration = 6;
+		idd = -1;
+		movingEnable = false;
+		
+		controls[]= {text};
+
+		class text: RscText
+		{
+			style = ST_MULTI + ST_CENTER + ST_NO_RECT;
+			lineSpacing = 1.0;
+			text = $STR_title2;
+			x = 0.17; y = 0.4; w = 0.66; h = 0.1;
+			colorText[] = {0, 0.5, 0, 1};
+			font = SteelfishB128;
+			sizeEx = 0.25;
+			size = 0.7;
+		};
+
+	};
+
+  class obrazok
+  {
+    idd=-1;
+    movingEnable=0;
+    duration=56;
+    fadein=0.1;
+    name="obraz";
+    controls[]={"pic01"};
+    class pic01
+    {
+      type=0;
+      idc=-1;
+      style=48;
+      colorBackground[]={0,0,0,0};
+      text="pic01.jpg"
+      colorText[]={1,1,1,1};
+      font="AudreysHandI48";
+      size=1;
+      x=0;
+      y=0.80;
+      w=1;
+      h=0.20;
+   };
+  };
+
+};
+
+
+class CfgRadio
+{
+
+
+	sounds[]= {a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,b1,b2,c1};
+
+	class a1
+	{
+		name = "1";
+		sound[]={"\sounds\a1.ogg", db+50, 1.0};
+		title=$STR_a1;
+	};
+
+	class a2
+	{
+		name = "";
+		sound[]={"\sounds\a2.ogg", db+50, 1.0};
+		title=$STR_a2;
+	};
+
+	class a3
+	{
+		name = "";
+		sound[]={"\sounds\a3.ogg", db+50, 1.0};
+		title=$STR_a3;
+	};
+
+	class a4
+	{
+		name = "";
+		sound[]={"\sounds\a4.ogg", db+50, 1.0};
+		title=$STR_a4;
+	};
+
+	class a5
+	{
+		name = "";
+		sound[]={"\sounds\a5.ogg", db+50, 1.0};
+		title=$STR_a5;
+	};
+
+	class a6
+	{
+		name = "";
+		sound[]={"\sounds\a6.ogg", db+50, 1.0};
+		title=$STR_a6;
+	};
+
+	class a7
+	{
+		name = "";
+		sound[]={"\sounds\a7.ogg", db+50, 1.0};
+		title=$STR_a7;
+	};
+
+	class a8
+	{
+		name = "";
+		sound[]={"\sounds\a8.ogg", db+50, 1.0};
+		title=$STR_a8;
+	};
+
+	class a9
+	{
+		name = "";
+		sound[]={"\sounds\a9.ogg", db+50, 1.0};
+		title=$STR_a9;
+	};
+
+	class a10
+	{
+		name = "";
+		sound[]={"\sounds\a10.ogg", db+50, 1.0};
+		title=$STR_a10;
+	};
+
+	class a11
+	{
+		name = "";
+		sound[]={"\sounds\a11.ogg", db+50, 1.0};
+		title=$STR_a11;
+	};
+
+	class a12
+	{
+		name = "";
+		sound[]={"\sounds\a12.ogg", db+50, 1.0};
+		title=$STR_a12;
+	};
+
+	class a13
+	{
+		name = "";
+		sound[]={"\sounds\a13.ogg", db+50, 1.0};
+		title=$STR_a13;
+	};
+
+	class b1
+	{
+		name = "";
+		sound[]={"\sounds\b1.ogg", db+50, 1.0};
+		title=$STR_b1;
+	};
+
+	class b2
+	{
+		name = "";
+		sound[]={"\sounds\b2.ogg", db+50, 1.0};
+		title=$STR_b2;
+	};
+
+	class c1
+	{
+		name = "";
+		sound[]={"\sounds\c1.ogg", db+50, 1.0};
+		title=$STR_c1;
+	};
+
+	class j1
+	{
+		name = "";
+		sound[]={"\sounds\j1.ogg", db+50, 1.0};
+		title=$STR_j1;
+	};
+
+	class o1
+	{
+		name = "";
+		sound[]={"\sounds\o1.ogg", db+50, 1.0};
+		title=$STR_o1;
+	};
+
+	class o2
+	{
+		name = "";
+		sound[]={"\sounds\o2.ogg", db+50, 1.0};
+		title=$STR_o2;
+	};
+};
+
+
+class Weapons
+{
+  class BAS_M240B
+  {
+    count = 1;
+  };
+
+  class BAS_M249
+  {
+    count = 2;
+  };
+
+  class BAS_M4REFLEXSM203
+  {
+    count = 1;
+  };
+
+  class BAS_M4ACOGS
+  {
+    count = 1;
+  };
+
+  class BAS_M4REFLEXM203
+  {
+    count = 1;
+  };
+
+  class BAS_M4REFLEXS
+  {
+    count = 2;
+  };
+
+  class BAS_AT4Launcher
+  {
+    count = 2;
+  };
+
+  class BAS_AK74hd
+  {
+    count = 1;
+  };
+
+};
+
+class Magazines
+{
+  class BAS_M240mag
+  {
+    count = 10;
+  };
+
+  class BAS_M249mag
+  {
+    count = 20;
+  };
+
+  class BAS_M4SMag
+  {
+    count = 20;
+  };
+
+  class BAS_M433grenade
+  {
+    count = 20;
+  };
+
+  class BAS_M4Mag
+  {
+    count = 20;
+  };
+
+  class BAS_MKshell
+  {
+    count = 20;
+  };
+
+  class BAS_AT4Rocket
+  {
+    count = 6;
+  };
+
+  class BAS_AK74hdmag
+  {
+    count = 5;
+  };
+};
+
+
+
+

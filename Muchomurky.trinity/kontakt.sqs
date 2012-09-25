@@ -1,0 +1,136 @@
+#kontrola
+~1
+?!kontakt: goto "kontrola"
+
+~0.5
+hrac groupRadio "a8"
+~5
+hrac groupRadio "a9"
+~3
+hrac groupRadio "a10" 
+
+nepritel=true
+~15
+"2" ObjStatus "DONE"
+"3" ObjStatus "ACTIVE"
+trabi setfuel 1
+
+playmusic "muchomurky"
+
+hrac groupRadio "a11"
+
+if (alive alpha2) then {[alpha2] join GrpNull}
+if (alive alpha3) then {[alpha3] join GrpNull}
+if (alive alpha4) then {[alpha4] join GrpNull}
+
+
+~35
+hrac sideRadio "a12"
+~8
+hrac sideRadio "a12"
+
+
+#dokola0
+~1
+?(hrac distance trabi)>120: goto "dokola0"
+
+hrac sideRadio "a12"
+~8
+hrac sideRadio "a12"
+
+
+#dokola
+~1
+?(hrac distance trabi)>70: goto "dokola"
+
+hrac say "auto"
+
+#dokola1
+~0.1
+?!(hrac knowsabout trabi<=2): goto "dokola1"
+
+playmusic "kostel"
+
+#dokola2
+~1
+?(hrac distance trabi)>10: goto "dokola2"
+
+ridic say "nastup"
+
+~3
+
+
+;****************************************************************************************************
+;*********************** HRAC JE V TRABANTU S PETREM ************************************************
+;****************************************************************************************************
+
+
+titlecut ["","WHITE OUT",0.5]
+~0.5
+if (hrac!=vehicle hrac) then {hrac action ["eject",vehicle hrac]; unassignvehicle hrac; }
+hrac moveincargo trabi
+titlecut ["","WHITE IN",0.5]
+
+~0.7
+"3" ObjStatus "DONE"
+
+setacctime 1
+
+trabi lock true
+
+hrac say "kecy1" 
+~7
+ridic say "kecy2"
+~6
+hrac say "kecy3" 
+~3
+ridic say "kecy4"
+~12
+hrac say "kecy5" 
+~4
+ridic say "kecy6" 
+~12
+ridic say "kecy7" 
+~6
+hrac say "kecy8" 
+~8
+ridic say "kecy9" 
+~15
+hrac say "kecy10"
+~5
+ridic say "kecy11"
+~12
+hrac say "kecy12"
+~3
+
+trabi lock false
+[] exec "exploze.sqs"
+
+#petr_jede
+~0.1
+?!petr_venku: goto "petr_jede"
+
+~0.2
+"4" ObjStatus "ACTIVE"
+"5" ObjStatus "ACTIVE"
+
+"zakladna" setmarkertype "flag"
+"pristav" setmarkertype "flag"
+
+hrac action ["eject",vehicle hrac];
+unassignvehicle hrac;
+hrac moveindriver trabi
+
+~235
+[] exec "palivo.sqs"
+
+#cekani_na_clun
+~5
+?!(hrac in clun): goto "cekani_na_clun"
+
+hrac say "a14"
+"4" ObjStatus "DONE"
+"5" ObjStatus "DONE"
+~5
+konec=true
+exit

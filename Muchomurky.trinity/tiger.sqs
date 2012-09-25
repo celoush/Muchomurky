@@ -1,0 +1,7 @@
+#kontrola
+~3
+?!(hrac in t55): goto "kontrola"
+setacctime 1
+~0.1
+playmusic "tiger"
+exit

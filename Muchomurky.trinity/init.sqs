@@ -1,0 +1,129 @@
+;INIT souboru
+
+verze_ok = RequiredVersion "1.91"
+?(!verze_ok): titletext["You must have flashpoint version 1.91. This mission use <typeof> and you don´t have it!!!","PLAIN DOWN",2]
+
+; Nastavení poèasí a promìných
+setviewdistance 700
+0 setfog 0.2
+0 setOvercast 0.2
+0 setrain 0
+end_smoke=false
+inelle=false
+rozdel=false
+dotoho=false
+kontakt=false
+nepritel=false
+hrac_v_trabi=false
+petr_venku=false
+"3" ObjStatus "HIDDEN"
+"4" ObjStatus "HIDDEN"
+
+;Nastavení identit
+hrac setidentity "William"
+alpha2 setidentity "Richard"
+alpha3 setidentity "Jakob"
+alpha4 setidentity "Tim"
+
+;Nastavení vybavení vojákù
+hrac exec "vojak.sqs"
+alpha2 exec "vojak.sqs"
+alpha3 exec "vojak.sqs"
+alpha4 exec "vojak.sqs"
+
+ridic = driver trabi
+ridic setidentity "Peter"
+ridic addEventHandler ["killed",{ridic setdammage 0;}]
+
+titlecut ["","BLACK IN",3]
+
+[player,heli1] exec "nalozit.sqs"
+(driver heli1) setface "face21"
+(gunner heli1) setface "face30"
+[vel2,heli2] exec "nalozit.sqs"
+
+[] exec "mimo.sqs"
+[] exec "kontakt.sqs"
+[] exec "tiger.sqs"
+
+_icolor = HDCOLORGRASS
+heli1 exec "effects\heli_dust.sqs"
+
+hrac LockWp true
+lek=hrac addaction ["Medic","lekarnicka.sqs"]
+
+#xxx
+~1
+?!rozdel: goto "xxx"
+
+heli2 sideRadio "j1"
+~5
+heli1 sideRadio "o1"
+~8
+hrac sideRadio "a1" ;"Alfa pøipravena!"
+
+#pheli
+~1
+?((player in heli1)or(alpha2 in heli1)or(alpha3 in heli1)or(alpha4 in heli1)): goto "pheli"
+~1
+
+heli1 sideRadio "o2"
+~6
+hrac sideRadio "a2" ;"Rozumím!"
+~4
+hrac sideRadio "a3" ;"Alfa konec!"
+5 fademusic 4
+~3
+playmusic "pevnost"
+~95
+
+deletevehicle vel2
+deletevehicle vr2
+deletevehicle vr3
+deletevehicle vr4
+deletevehicle (gunner heli1)
+deletevehicle (driver heli1)
+deletevehicle heli1
+deletevehicle (gunner heli2)
+deletevehicle (driver heli2)
+deletevehicle heli2
+
+hrac GroupRadio "a4" ;"Rivlin je liduprázdný. Všechno vypadá v naprostém poøádku!"
+~5
+alpha2 GroupRadio "b1"; "Až na to, že tu nikdo není!"
+~4
+hrac GroupRadio "a5"; "Pøesnì tak! Pokraèujeme podle plánu do Ellesmeru!"
+hrac lockWp false
+"1" ObjStatus "DONE"
+~5
+alpha3 GroupRadio "c1", "Pane! Víte, že podle øádu mùžeme používat opuštìná civilní vozidla!"
+~7
+hrac GroupRadio "a6" ;"Vím o tom. Najdeme nìjaké volné a vyrazíme!"
+
+"ellesmore" setmarkertype "flag"
+
+
+#velles
+~1
+?!inelle: goto "velles"
+;hrac je v elles
+
+
+if (vehicle player!=player) then {(vehicle player) setfuel 0}
+
+#nocar
+~1
+?(vehicle player!=player): goto "nocar"
+; hrac je mimo vuz
+
+[] exec "pocasi.sqs"
+~50
+alpha2 groupradio "b2" ;"Co se to kurva dìje?"
+~7
+hrac groupRadio "a7"; "Nevím, nelíbí se mi to."
+
+dotoho=true
+~15
+savegame
+
+exit

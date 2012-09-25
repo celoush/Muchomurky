@@ -1,0 +1,177 @@
+venku=false
+konec=false
+end_smoke=true
+hrac setidentity "William"
+alpha2 setidentity "Richard"
+alpha3 setidentity "Jakob"
+alpha4 setidentity "Tim"
+(driver helix) setface "face21"
+(gunner helix) setface "face30"
+
+steve setmimic "NORMAL"
+
+[] exec "vylozit1.sqs"
+
+_camera = "camera" CamCreate [0,0,0]
+_camera CameraEffect ["Internal","Back"]
+
+CutRsc ["obrazok","PLAIN"]
+
+
+;=== 23:13:04 - reporter
+_camera camSetTarget [-89014.16,1542.85,7.26]
+_camera camSetPos [10984.36,1638.46,1.58]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;titlecut ["","WHITE IN",0.3]
+
+steve say "rep1"
+~7
+;steve switchmove "EffectStandTalk"
+steve say "rep2"
+~8
+steve say "rep3"
+~4
+steve say "rep4"
+~5.5
+steve say "rep5"
+~4
+steve say "rep6"
+~8
+steve say "rep7"
+~9
+steve say "rep8"
+~7
+steve say "rep9"
+steve setmimic "SMILE"
+~4
+
+titlecut ["","BLACK OUT",2]
+~2
+
+deletevehicle heli1
+deletevehicle driver heli1
+deletevehicle gunner heli1
+
+; Titulky
+
+playmusic "osude"
+titleRsc ["titlesceloush", "PLAIN"]
+~5
+titleRsc ["titlesuvadi", "PLAIN"]
+~5
+titleRsc ["titlesorb", "PLAIN"]
+~7.5
+
+titlecut ["","BLACK IN",2]
+
+
+;=== 23:05:33
+_camera camSetTarget [10094.46,3615.30,-99928.07]
+_camera camSetPos [10225.65,1626.23,4.98]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2.2
+(driver heli) action ["ENGINE ON",heli]
+~0.5
+;=== 23:05:56
+_camera camSetTarget [10218.87,1729.10,-99970.14]
+_camera camSetPos [10225.79,1624.24,27.67]
+_camera camSetFOV 0.700
+_camera camCommit 7
+@camCommitted _camera
+
+;=== 23:07:29
+_camera camSetTarget [39262.54,97186.05,-5427.40]
+_camera camSetPos [10267.95,1638.21,7.50]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 23:07:35
+_camera camSetTarget [39262.54,97186.05,-5427.78]
+_camera camSetPos [10267.95,1638.21,2.00]
+_camera camSetFOV 0.700
+_camera camCommit 6
+~2
+(driver helix) action ["ENGINE ON",helix]
+
+@camCommitted _camera
+~2.5
+;helix exec "effects\heli_dust.sqs"
+~2
+
+;=== 23:08:51
+_camera camSetTarget [6749.64,-94608.98,26911.98]
+_camera camSetPos [10269.09,1648.83,0.25]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~1
+helix domove [getpos helix select 0, getpos helix select 1, 5]
+helix flyinheight 5
+~4
+
+;=== 23:09:50
+_camera camSetTarget [16393.48,101134.96,-7734.32]
+_camera camSetPos [10225.09,1628.84,1.76]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+~2
+;=== 23:09:56
+_camera camSetTarget [104570.05,-30596.73,-7734.33]
+_camera camSetPos [10225.20,1629.25,1.76]
+_camera camSetFOV 0.700
+_camera camCommit 3
+@camCommitted _camera
+;=== 23:10:18
+_camera camSetTarget [20567.51,-97529.98,-7734.75]
+_camera camSetPos [10225.20,1629.25,1.76]
+_camera camSetFOV 0.700
+_camera camCommit 3
+@camCommitted _camera
+~1
+
+;=== 23:10:50
+_camera camSetTarget [74465.83,-67386.99,33355.38]
+_camera camSetPos [10223.13,1627.81,0.25]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 23:10:54
+_camera camSetTarget [110148.40,-2076.92,-1062.75]
+_camera camSetPos [10223.13,1627.81,0.25]
+_camera camSetFOV 0.700
+_camera camCommit 5
+~4.5
+heli domove [getpos heli select 0, getpos heli select 1, 5]
+heli flyinheight 5
+@camCommitted _camera
+~3
+
+;=== 23:11:27
+_camera camSetTarget [-68038.98,62919.30,-9560.60]
+_camera camSetPos [10355.95,1585.26,9.87]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 23:11:39
+_camera camSetTarget [-84899.91,30458.03,-9558.67]
+_camera camSetPos [10355.95,1585.26,37.25]
+_camera camSetFOV 0.700
+_camera camCommit 12
+heli domove getpos presun
+heli flyinheight 40
+helix flyinheight 12.754
+~3.5
+helix domove getpos presun
+helix flyinheight 20
+end_smoke=true
+~6
+titlecut ["","BLACK OUT",2]
+~6.5
+konec=true
+exit

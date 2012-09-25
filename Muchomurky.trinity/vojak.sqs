@@ -1,0 +1,23 @@
+_player = _this
+removeAllweapons _player 
+_player addmagazine "BAS_M4Mag"
+_player addmagazine "BAS_MKshell"
+_player addweapon "BAS_M4MKACOG"
+_player addmagazine "BAS_MKshell"
+_player addmagazine "BAS_MKshell"
+_player addmagazine "BAS_MKshell"
+_player addmagazine "BAS_M4Mag"
+_player addmagazine "BAS_M4Mag"
+_player addmagazine "BAS_M4Mag"
+_player addmagazine "BAS_M4Mag"
+_player addmagazine "handgrenade"
+
+?(_player!=player):exit
+_player addweapon "Binocular"
+_player addmagazine "BAS_BerettaMag"
+_player addweapon "BAS_Beretta"
+_player addmagazine "BAS_BerettaMag"
+_player addmagazine "BAS_BerettaMag"
+_player addmagazine "BAS_BerettaMag"
+
+exit

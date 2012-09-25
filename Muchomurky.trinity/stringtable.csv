@@ -1,0 +1,67 @@
+LANGUAGE,Czech,English,Comment
+
+------------------------------------ Main Titles -----------------------------------------
+
+STR_OnLoadMission, "Nahrávám misi","Loading mission",
+STR_OnLoadIntro, "Prosím strpení...","Please wait...",
+
+
+STR_title1, "Celoush","Celoush",
+
+STR_title2, "uvádí","present",
+
+STR_title3, "Muchomùrky","Toadstools",
+
+STR_title4, "Konec","The End",
+
+STR_CFG_GRPNAMES_CHARLIE, "Jestøáb","Hawk",
+STR_CFG_GRPNAMES_DELTA, "Malý orel","Little Eagle",
+STR_CFG_GRPCOL_BLACK, "", "",
+
+STR_a1, "Alfa pøipravena!","Alpha ready!",
+STR_a2, "Rozumím. Alfa konec","Roger! Alpha out!",
+STR_a4, "Rivlin je liduprázdný. Všechno vypadá v naprostém poøádku!","There is nobody in Rivlin. It´s allright.",
+STR_a5, "Pøesnì tak! Pokraèujeme podle plánu do Ellesmeru!","Yeah! We must continue in plan to Ellesmere!",
+STR_a6, "Vím o tom. Najdeme nìjaké volné a vyrazíme!","I know that. We found one and go!",
+STR_a7, "Nevím, nelíbí se mi to.","I don´t know. It seems to bad!",
+STR_a8, "Hej vy! Stùjte!","Hey you! Stop!",
+STR_a9, "Stát!","Stop!",
+STR_a10, "Palte podle libosti!","Open fire!",
+STR_a11, "Nemá to cenu! Stahujeme se do Rivlinu!","No chance! All go back to Rivlin!!!",
+STR_a12, "Základno, tady Alfa požaduji vyzvednutí!","Base, this is Alfa. I need help!",
+STR_a13, "Opakuji.","I say again.",
+STR_a14, "Doufám, že se s tím palivem dostanu až na základnu!","Oh no. Few fuel. I hope that I will return to the base.",
+
+STR_b1, "Až na to, že tu nikdo není!","But one thing. There´s nobody",
+STR_b2, "Co se to kurva dìje?","What a fuck is doing here?",
+
+STR_c1, "Pane! Víte, že podle øádu mùžeme používat opuštìná civilní vozidla!","Sir! We can use a free civil car! You know that?",
+
+STR_j1, "Malý orle! Opouštíme formaci! Hodnì štìstí","Little Bird! This is Hawk! We leave formation! Good luck!",
+STR_o1, "Rozumím, jestøábe! Dobré poøízení! Alfo pøipravte se na pøistání. Jsme kousek od Rivlinu.","Roger that! Alpha, ready to landing? We are on the way to Rivlin.",
+STR_o2, "Alfa vysazena! Vracím se zpìt! Pokud nastanou nìjaké potíže Alfo, tak nás okamžitì zavolejte a my pro vás pøiletíme! Malý orel konec.","Alfa disamberk. I am going home. Alpha, if you will be in trouble, call me. I return for you. Little Hawk Over!",
+
+STR_auto, "To auto tu nebylo!","The car wasn´t here!",
+STR_nastup, "Hej vojáku, rychle nastupte!","Hey soldier! Get in quickly!",
+STR_kecy1,"Díky moc! Ale kdo jste a jaktože jste tak ... normální?","Thank you very much. But who are you? And why are you ... normal?",
+STR_kecy2,"Jmenuju se Petr Urban. Od malièka žiju v Helmu nedaleko odsud.","My name is Peter Urban. I live at Helm all time.",
+STR_kecy3,"A co se tu pøesnì stalo?","And what´s doing here?",
+STR_kecy4,"Nevím, prostì ze dne na den se zatáhlo, pøišla mlha a zaèalo vraždìní.\nLidé se chovali jak šílení. Zaèali se vraždit navzájem. Bylo to dìsný.","I dont know. One day the fog coming. Some people go to crazy.\n They kill others. It was crazy!",
+STR_kecy5,"Jak jste dokázal pøežít?","How you survive?",
+STR_kecy6,"Schoval jsem se v jednom starém krytu! Pak se obloha vyjasnila a všude byl klid.\n Když jsem zaslechl vrtulníky myslel jsem, že je to záchrana ...","I hided in old war-mantle. Sky clened and it was rest.\n Then i heard helicopters. I mean, that help is coming...",
+STR_kecy7,"...ale místo toho pøišla znovu mlha. A zabíjení.","...but fog returned. And killing too.",
+STR_kecy8,"Netušíte, jak bych se mohl odsud dostat? Ztratil jsem spojení se základnou. A vrtulník v takovém poèasí stejnì nepoletí!","How can i go out of there? I must go back on our base. But I lost contact with their.\n Heli cannot fly in this weather!",
+STR_kecy9,"Jedinou možnosti je podle mne na lodi. Ale tam je spousta tìchhle NETVORù.\n Být vámi, tak se pokusím dostat na naši vojenskou základnu.\nTam jistì najdete nìco, co vám pomùže!","Only ship! But there is a lot of MONSTERS.\nYou must go on our army-base and find anything, what help you.",
+STR_kecy10,"Asi mi nic jiného nezbývá!","It´s chance!",
+STR_kecy11,"Já zùstanu tady a schovám se v krytu! Zkuste se vrátit na vaši základnu a pak nìco podniknìte.\n Slibte mi, že se pro mne vrátíte! Prosím.","I stay here and cover! You try go back to your base and do anything for me.\n Please, you must promise me, that you will return for me!",
+STR_kecy12,"Slibuji.","I Promise!",
+
+STR_rep1,"Podle zpráv od jednoho z vojákù, který si nepøál být jmenován,\n je situace na ostrovì Trinity hodnocena armádou jako krizová.","The situation on Trinity is calling crisis by Us Army.",
+STR_rep2,"Veškerý kontakt s ostrovem byl ztracen pøed šesti dny, kdy se nad ostrovem pøehnala\n velká bouøe a držela se v jeho okolí až do vèerejšího veèera.","We have no contact with island. Contact was lost before six days, when the big storm became.\n It was there for five days. Since yesterday.",
+STR_rep3,"Jakékoliv pokusy o kontakt byly neúspìšné.","All attempt about contact has bad success.",
+STR_rep4,"Na leteckých zábìrech prùzkumného letounu jsou vidìt opuštìné vesnice a prázdná auta.","We can see abandoded village a and empty cars from the air shot explorational plane.",
+STR_rep5,"Kam se podìli obyvatelé ostrova zùstává záhadou.","The mystery is where the people are.",
+STR_rep6,"Na prosby mnoha zdravotnických organizací požádala OSN o vyslání malé prùzkumné jednotky,\n která má tuto záhadu vyøešit.","OSN send explorers, which they should unravel this mystery."
+STR_rep7,"I pøes pøipomínky Francie a Èíny se akce ujmou jednotky Rangers,\n které podle amerického ministra obrany mìly nedaleko ostrova Trinity cvièení.","They send Rangers from US Army. France and China protested.\n Defense Secretary said that they haved a training close by Trinity.",
+STR_rep8,"Ministr obrany popøel zprávu, že by toto cvièení mohlo mít\n jakoukoliv spojitost s událostmi na ostrovì.","Defense Secretary refused option,\n that the training have conjunction with Trinity crisis.",
+STR_rep9,"Steve Martin, Timberland","Steve Martin, Timerland",

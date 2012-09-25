@@ -1,0 +1,22 @@
+#dokola
+~5
+?((hrac distance clun)>185):goto "dokola" 
+
+?(hrac==(vehicle hrac)): exit
+_kara = vehicle hrac
+
+SaveGame
+~3
+setacctime 1
+playmusic "kostel"
+
+?(_kara==t55): hrac addscore 2000;
+
+#dokola2
+~0.15
+_kara setdammage (Damage _kara + 0.02)
+?(damage _kara)<0.9: goto "dokola2"
+~6+random 3
+_kara setdammage 1
+
+exit

@@ -1,0 +1,11 @@
+(_this select 0) setdammage 1
+_zabijak = _this select 1
+
+_zabijak switchmove "TakeFlag"
+_zabijak say "wau"
+~3
+deletevehicle (_this select 0)
+~0.5
+_zabijak switchmove null
+
+exit

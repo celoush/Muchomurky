@@ -1,0 +1,6 @@
+hrac removeaction lek
+?!(hrac!=vehicle hrac):hrac switchmove "CombatToMedic";
+~5
+hrac setdammage 0
+?!(hrac!=vehicle hrac):hrac switchmove "MedicToCombat";
+exit

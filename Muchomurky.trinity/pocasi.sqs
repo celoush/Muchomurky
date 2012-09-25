@@ -1,0 +1,15 @@
+; - puvodni pocasi
+;~5
+;setacctime 1
+;playmusic "soumrak"
+;10 setfog 0.93
+;~10
+;15 setOvercast 0.7
+
+~5
+setacctime 1
+playmusic "soumrak"
+15 setOvercast 0.7
+~15
+10 setfog 0.93
+exit

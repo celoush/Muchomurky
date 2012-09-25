@@ -1,0 +1,162 @@
+disableUserinput true
+0 setfog 0.93
+0 setOvercast 0.7
+0 fadesound 0
+
+titlecut ["","BLACK IN",3]
+
+_camera = "camera" CamCreate [0,0,0]
+_camera CameraEffect ["Internal","Back"]
+
+;=== 17:18:04 - slunce nad mesicem
+_camera camSetTarget [109467.61,22117.24,17360.96]
+_camera camSetPos [12079.71,7423.20,49.62]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+;=== 17:18:32 - lod
+;_camera camSetTarget [109299.16,-14508.88,-8666.36]
+_camera camSetTarget clun
+_camera camSetPos [12120.87,7426.87,5.83]
+_camera camSetFOV 0.700
+_camera camCommit 10
+;~3
+playmusic "andele"
+@camCommitted _camera
+
+
+;=== 17:18:53 - kolem lodi
+_camera camSetTarget clun
+_camera camSetPos [12191.43,7414.49,6.19]
+_camera camSetFOV 0.700
+_camera camCommit 8
+@camCommitted _camera
+
+;=== 17:24:27 - most
+;=== 22:02:42
+_camera camSetTarget [-54157.69,-70381.76,8.20]
+_camera camSetPos [9219.63,6970.12,38.14]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+; - puvodni ukazujici chybejici cast mostu
+;_camera camSetTarget [-54481.09,-70046.85,-2361.97]
+;_camera camSetPos [9235.49,6988.28,21.65]
+;_camera camSetFOV 0.700
+;_camera camCommit 0
+;@camCommitted _camera
+
+;=== 17:24:38 - na stvury
+_camera camSetTarget [-54481.09,-70046.85,-2362.17]
+_camera camSetPos [9167.93,6907.20,34.50]
+_camera camSetFOV 0.700
+_camera camCommit 5
+@camCommitted _camera
+
+;=== 17:30:08 - zakladna
+_camera camSetTarget [106675.15,22823.00,18017.11]
+_camera camSetPos [9512.99,7305.03,3.25]
+_camera camSetFOV 0.091
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 17:30:25 - s curaky
+_camera camSetTarget [106675.15,22823.00,18016.97]
+_camera camSetPos [9512.99,7305.03,0.44]
+_camera camSetFOV 0.574
+_camera camCommit 5
+@camCommitted _camera
+
+;=== 17:32:06 - ksichty
+_camera camSetTarget [-89250.96,-8312.20,163.26]
+_camera camSetPos [9522.24,7303.69,1.69]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 17:32:16 - na konec
+_camera camSetTarget [-89250.96,-8312.20,163.42]
+_camera camSetPos [9521.33,7309.43,1.69]
+_camera camSetFOV 0.700
+_camera camCommit 7
+@camCommitted _camera
+
+;=== 17:32:33 - pohled na mesic
+_camera camSetTarget [106689.50,30026.52,6598.99]
+_camera camSetPos [9517.49,7308.53,0.64]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 17:32:38 - nahoru
+_camera camSetTarget [106689.50,30026.52,6598.88]
+_camera camSetPos [9517.49,7308.53,1.52]
+_camera camSetFOV 0.700
+_camera camCommit 3
+@camCommitted _camera
+
+titlecut ["","BLACK OUT",1]
+~1
+titlecut ["","BLACK IN",1]
+
+;=== 18:16:11
+_camera camSetTarget [1994.66,108241.27,7.68]
+_camera camSetPos [8575.20,8458.39,1.02]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+;=== 18:16:49
+_camera camSetTarget [1994.66,108241.27,8.05]
+_camera camSetPos [8595.03,8459.71,7.68]
+_camera camSetFOV 0.700
+_camera camCommit 12
+
+7 setfog 0
+~7
+heli flyinheight 50
+5 setOvercast 0
+
+manik1 setdammage 1
+~0.3
+manik2 setdammage 1
+
+~3.7
+titlecut ["","BLACK OUT",1]
+@camCommitted _camera
+titlecut ["","BLACK IN",1]
+
+;=== 18:23:03
+_camera camSetTarget [109915.96,22029.62,15202.88]
+_camera camSetPos [12164.26,7417.64,1.34]
+_camera camSetFOV 0.700
+_camera camCommit 0
+@camCommitted _camera
+
+~3
+
+;=== 18:23:08
+_camera camSetTarget [43309.13,12073.20,-94910.91]
+_camera camSetPos [12164.26,7417.64,1.30]
+_camera camSetFOV 0.700
+_camera camCommit 1
+@camCommitted _camera
+
+;=== 18:23:33
+_camera camSetTarget [17951.41,8282.71,-99821.16]
+_camera camSetPos [12164.26,7417.64,62.87]
+_camera camSetFOV 0.700
+_camera camCommit 25
+~10
+heli flyinheight 5
+~8
+titlecut ["","BLACK OUT",5]
+~5
+titleRsc ["titleskonec", "PLAIN"];
+@camCommitted _camera
+; konec
+~8
+disableUserinput false
+konec=true
+exit

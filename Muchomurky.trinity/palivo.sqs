@@ -1,0 +1,19 @@
+#zacatek
+
+~5
+
+?(hrac==(vehicle hrac)): goto "zacatek"
+
+~35 + random 25
+
+_kara = vehicle hrac
+
+?(_kara==t55): goto "zacatek"
+
+playsound "aaa"
+~1
+_kara setfuel 0
+
+~5
+
+goto "zacatek"

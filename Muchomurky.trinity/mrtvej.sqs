@@ -1,0 +1,14 @@
+_mrtvola = _this select 0
+~(3+random 3)
+_skupina = group _mrtvola;
+_typVojaka = typeOf _mrtvola;
+_pozice = getpos _mrtvola;
+_mrtvola saveIdentity "vojak";
+
+deletevehicle _mrtvola;
+
+_typVojaka CreateUnit [_pozice,_skupina,"zombie=this;this exec ""zombie.sqs"""];
+zombie LoadIdentity "vojak";
+deleteIdentity "vojak";
+
+exit

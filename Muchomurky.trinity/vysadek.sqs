@@ -1,0 +1,15 @@
+; [<jméno vedoucího skupiny>, <jméno vrtulníku>] exec "eject.sqs"
+_leader = _this select 0
+_heli = _this select 1
+_group = units _leader
+_total = count _group
+_i = 0
+setacctime 1
+#loop
+(_group select _i) action ["eject", _heli]
+unassignvehicle (_group select _i)
+~0.01
+_i = _i + 1
+? _i < _total : goto "loop"
+exit
+

@@ -1,0 +1,19 @@
+#dokola
+~0.1
+_z = Getpos heli1 select 2
+?(_z>1.5): goto "dokola"
+
+[vel1,heli1] exec "vysadek1.sqs"
+
+
+#dokola2
+~0.1
+?!venku: goto "dokola2"
+
+heli1 domove getpos stahni1
+heli1 flyinheight 25
+vel1 domove getpos stahniv1
+vel1 setbehaviour "SAFE"
+Vel1 setspeedmode "LIMITED"
+
+exit

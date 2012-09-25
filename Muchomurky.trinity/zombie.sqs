@@ -1,0 +1,28 @@
+; sqs zabijacke stvury - patrace
+
+removeAllWeapons _this;
+_this setcaptive true
+_reakce = 2 + random 1
+_this setunitPos "UP"
+_this setspeedmode "LIMITED"
+_this setcombatmode "GREEN"
+_this disableai "AUTOTARGET"
+_this setBehaviour "CARELESS"
+_this switchmove "FXStandFromDip"
+_this addEventHandler ["killed",{[_this select 0] exec "mrtvej.sqs";}]
+
+#kkk
+~1
+?!dotoho: goto "kkk"
+
+#cil
+_a = NearestObject[_this,typeOf (vehicle player)]
+
+if (IsNull _a) then {_this domove getpos vehicle player;} ELSE {if (vehicle hrac==hrac) then {kontakt=true;_vzdalenost = _a distance _this;_this domove getpos _a;if (_vzdalenost<5) then {[_a,_this] exec "smrt.sqs"};};}
+
+if (nepritel) then {_this setcaptive false;}
+
+~_reakce
+
+?(alive _this):goto "cil"
+exit
